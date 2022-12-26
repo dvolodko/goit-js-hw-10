@@ -28,3 +28,8 @@ li {
   font-size: 18px;
   gap: 12px;
 }
+
+.card-header {
+  display: flex;
+  gap: 30px;
+}

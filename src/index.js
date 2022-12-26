@@ -16,7 +16,7 @@ const refs = {
 refs.searchField.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
 
 function onSearch(e) {
-  const searchQuery = e.target.value;
+  const searchQuery = e.target.value.trim();
   if (!searchQuery) {
     resetRender();
     return;
@@ -30,7 +30,6 @@ function onSearch(e) {
       } else if (countries.length <= 10 && countries.length > 1) {
         renderSmallCountryCards(countries);
       } else if (countries.length === 1) {
-        console.log('всередині однієї країни');
         renderBigCountryCard(countries);
       } else {
         Notify.failure('Oops, there is no country with that name');
