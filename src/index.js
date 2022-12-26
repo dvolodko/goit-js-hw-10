@@ -11,7 +11,7 @@ const refs = {
   searchField: document.querySelector('#search-box'),
 };
 
-refs.searchField.addEventListener('input', debounce(onSearch, 300));
+refs.searchField.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
 
 function onSearch(e) {
   const searchQuery = e.target.value;
