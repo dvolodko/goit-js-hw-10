@@ -32,6 +32,7 @@ function onSearch(e) {
       } else if (countries.length === 1) {
         renderBigCountryCard(countries);
       } else {
+        resetRender();
         Notify.failure('Oops, there is no country with that name');
       }
     })

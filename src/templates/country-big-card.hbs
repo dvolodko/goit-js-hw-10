@@ -8,7 +8,7 @@
       <p class='card-text'><b>Capital:</b> {{capital}}</p>
       <p class='card-text'><b>Population:</b> {{population}}</p>
       <p class='card-text'><b>Languages:</b>
-        {{#each languages}}{{name}}, {{/each}}</p>
+        {{#each languages}}{{name}}{{#unless @last}}, {{/unless}}{{/each}}</p>
     </div>
   </div>
 {{/each}}
